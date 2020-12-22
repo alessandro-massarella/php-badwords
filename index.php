@@ -10,13 +10,17 @@ $testo = "lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ipsa
 
 $bad_word = $_GET["bad_word"];
 
-var_dump($bad_word);
+// var_dump($bad_word);
 
-var_dump($testo);
+// var_dump($testo);
 
 // trovo la bad word e la sostituisco con ***
 $new_testo = str_replace($bad_word, "***", $testo);
-var_dump($new_testo);
+// var_dump($new_testo);
+
+// lunghezza del paragrafo
+$long_par = strlen($new_testo);
+// var_dump($long_par);
 
 
 
@@ -25,3 +29,5 @@ var_dump($new_testo);
 <!-- stampo in un paragrafo il contenuto della variabile testo -->
 <p> TESTO ORIGINALE:<?php echo $testo ?> </p>
 <p> TESTO CENSURATO:<?php echo $new_testo ?> </p>
+
+<p>Lunghezza paragrafo: <?php echo $long_par ?> parole</p>
